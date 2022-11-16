@@ -1,0 +1,10 @@
+class Solution {
+    public long solution(long n) {
+        for(long i=1;i<=n;i++){
+            if(i*i==n){            //i의 제곱이 n인지 확인
+                return (i+1)*(i+1);  //맞으면 i+1
+            } 
+        }  
+        return -1;
+    }
+}
