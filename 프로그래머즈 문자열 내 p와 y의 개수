@@ -1,0 +1,25 @@
+class Solution {
+    boolean solution(String s) {
+        boolean answer = true;
+        String str = s.toUpperCase(); //모두 대문자로 치환
+        int cntP=0; //p의 개수 
+        int cntY=0; //y의 개수
+        String[] arr= new String[s.length()]; 
+        arr = str.split(""); //대문자로 치환한 문자열을 하나씩 나누여 배열에 넣음.
+        for(int i=0; i<arr.length;i++){ //하나씩 비교.
+            if(arr[i].equals("P")) {      //****** String 이니 비교할때는 [==] 가 아닌 [equals]를 쓰자 !!!!******
+                cntP++;
+            }
+            if(arr[i].equals("Y")){
+                cntY++;
+            } 
+        }
+        if(cntP==cntY) {
+            answer =true;
+        }
+        else {
+            answer=false;
+        }
+        return answer;
+    }
+}
