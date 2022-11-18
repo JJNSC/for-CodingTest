@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(String s) {
+	    int answer = 0;
+	    String[] arr= s.split("");
+	    
+	    if(arr[0].equals("-")) {
+	    	for(int i =1 ; i<arr.length ;i++) {
+	    		answer =answer*10+Integer.parseInt(arr[i]);
+	    	}
+	    	answer =answer*(-1);
+            }else {
+	    	answer= Integer.parseInt(s);
+	    }
+        return answer;
+    }
+}
